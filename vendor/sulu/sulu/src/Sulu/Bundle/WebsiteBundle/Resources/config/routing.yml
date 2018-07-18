@@ -1,0 +1,4 @@
+sulu_website.cache.remove:
+    path: /cache
+    defaults: { _controller: SuluWebsiteBundle:Cache:clear }
+    methods: [DELETE]
