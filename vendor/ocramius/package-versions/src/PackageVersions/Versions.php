@@ -121,7 +121,7 @@ final class Versions
   'phpcr/phpcr-shell' => '1.0.1@e3ff8fb8d99b0b490d1c11dbff1f5bfc28049de0',
   'sensio/generator-bundle' => 'v3.1.7@28cbaa244bd0816fd8908b93f90380bcd7b67a65',
   'symfony/phpunit-bridge' => 'v3.4.12@8a21eb6bedad38bf1f15d529c65eb9e17d0242fd',
-  'sulu/sulu-minimal' => '1.6.20@',
+  'sulu/sulu-minimal' => 'dev-master@f3f679377963039e042f352dc64161965427dd6e',
 );
 
     private function __construct()
