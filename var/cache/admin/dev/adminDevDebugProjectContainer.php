@@ -16,6 +16,6 @@ if (!\class_exists(adminDevDebugProjectContainer::class, false)) {
 
 return new \ContainerHbnafim\adminDevDebugProjectContainer(array(
     'container.build_hash' => 'Hbnafim',
-    'container.build_id' => '95e0be99',
-    'container.build_time' => 1531906626,
+    'container.build_id' => '3f8d3ecf',
+    'container.build_time' => 1531916120,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerHbnafim');
