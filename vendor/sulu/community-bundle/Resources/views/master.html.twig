@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/bundles/app/css/style.css" rel="stylesheet">
+	<link href="/bundles/app/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+		   <div class="container">
+			   <a class="navbar-brand" href="#"><img src="{{ asset('/bundles/app/img/logo.png') }}"></a>
+		   </div>
+        </nav>
+	</header>
+	
+	<section id="content" vocab="http://schema.org/" typeof="Content">
+		{% block content %}{% endblock %}
+	</section>
+	
+<footer>
+	{% block footer %}
+		<p>Copyright {{ 'now'|date('Y') }} SULU</p>
+	{% endblock %}
+</footer>
+
+	{% block javascripts %}
+
+		<script src="/bundles/app/js/jquery.min.js"></script>
+		<script src="/bundles/app/js/bootstrap.min.js"></script>
+
+	{% endblock %}
+	</body>
+</html>

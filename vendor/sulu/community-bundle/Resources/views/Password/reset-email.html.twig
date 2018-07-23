@@ -1,0 +1,7 @@
+{% extends "SuluCommunityBundle::master-email.html.twig" %}
+
+{% block content %}
+    {% set url = url('sulu_community.login') %}
+
+    {{ 'password_reseted'|trans }}
+{% endblock %}
