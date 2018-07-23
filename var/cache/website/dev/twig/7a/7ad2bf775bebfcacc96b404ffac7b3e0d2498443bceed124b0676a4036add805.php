@@ -62,39 +62,31 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
         // line 38
         echo "        </header>
 
-        <form action=\"";
-        // line 40
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sulu_search.website_search");
-        echo "\" method=\"GET\">
-            <input name=\"q\" type=\"text\" placeholder=\"Search\" />
-            <input type=\"submit\" value=\"Go\" />
-        </form>
-
         <section id=\"content\" vocab=\"http://schema.org/\" typeof=\"Content\">
             ";
-        // line 46
+        // line 41
         $this->displayBlock('content', $context, $blocks);
-        // line 47
+        // line 42
         echo "        </section>
 
         <aside>
             ";
-        // line 50
+        // line 45
         $this->displayBlock('aside', $context, $blocks);
-        // line 51
+        // line 46
         echo "        </aside>
 
         <footer>
             ";
-        // line 54
+        // line 49
         $this->displayBlock('footer', $context, $blocks);
-        // line 57
+        // line 52
         echo "        </footer>
 
         ";
-        // line 59
+        // line 54
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 65
+        // line 60
         echo "
     </body>
 </html>
@@ -196,7 +188,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
 
     }
 
-    // line 46
+    // line 41
     public function block_content($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -213,7 +205,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
 
     }
 
-    // line 50
+    // line 45
     public function block_aside($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -230,7 +222,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
 
     }
 
-    // line 54
+    // line 49
     public function block_footer($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -239,7 +231,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 55
+        // line 50
         echo "                <p>Copyright ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " SULU</p>
@@ -252,7 +244,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
 
     }
 
-    // line 59
+    // line 54
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -261,7 +253,7 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 60
+        // line 55
         echo "
             <script src=\"assets/js/jquery.min.js\"></script>
             <script src=\"assets/js/bootstrap.min.js\"></script>
@@ -280,14 +272,9 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
         return "master.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  265 => 60,  256 => 59,  243 => 55,  234 => 54,  217 => 50,  200 => 46,  187 => 34,  176 => 31,  172 => 30,  169 => 29,  165 => 28,  154 => 19,  145 => 18,  128 => 14,  111 => 12,  98 => 65,  96 => 59,  92 => 57,  90 => 54,  85 => 51,  83 => 50,  78 => 47,  76 => 46,  67 => 40,  63 => 38,  61 => 18,  56 => 15,  54 => 14,  51 => 13,  49 => 12,  36 => 1,);
+        return array (  257 => 55,  248 => 54,  235 => 50,  226 => 49,  209 => 45,  192 => 41,  179 => 34,  168 => 31,  164 => 30,  161 => 29,  157 => 28,  146 => 19,  137 => 18,  120 => 14,  103 => 12,  90 => 60,  88 => 54,  84 => 52,  82 => 49,  77 => 46,  75 => 45,  70 => 42,  68 => 41,  63 => 38,  61 => 18,  56 => 15,  54 => 14,  51 => 13,  49 => 12,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -330,11 +317,6 @@ class __TwigTemplate_9c1324aeacee0f6785c31412c891b6b4b0683b0a3cdfd2277be6b46909d
                 </nav>
             {% endblock %}
         </header>
-
-        <form action=\"{{ path('sulu_search.website_search') }}\" method=\"GET\">
-            <input name=\"q\" type=\"text\" placeholder=\"Search\" />
-            <input type=\"submit\" value=\"Go\" />
-        </form>
 
         <section id=\"content\" vocab=\"http://schema.org/\" typeof=\"Content\">
             {% block content %}{% endblock %}
