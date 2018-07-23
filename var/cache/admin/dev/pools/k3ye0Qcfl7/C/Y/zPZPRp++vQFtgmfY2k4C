@@ -1,3 +1,0 @@
-0
-%255BSulu%255CBundle%255CSecurityBundle%255CEntity%255CBaseUser%2524id%255D%255B1%255D
-a:2:{i:0;O:32:"JMS\Serializer\Annotation\Expose":1:{s:2:"if";N;}i:1;O:32:"JMS\Serializer\Annotation\Groups":1:{s:6:"groups";a:2:{i:0;s:8:"frontend";i:1;s:8:"fullUser";}}}

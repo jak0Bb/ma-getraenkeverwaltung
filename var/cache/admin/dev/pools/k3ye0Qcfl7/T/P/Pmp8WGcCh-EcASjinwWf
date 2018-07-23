@@ -1,3 +1,0 @@
-0
-%255BSulu%255CBundle%255CCommunityBundle%255CController%255CBlacklistItemController%255D%255B1%255D
-a:2:{i:0;O:48:"FOS\RestBundle\Controller\Annotations\NamePrefix":1:{s:5:"value";s:15:"sulu_community.";}i:1;O:51:"FOS\RestBundle\Controller\Annotations\RouteResource":1:{s:8:"resource";s:14:"blacklist-item";}}
