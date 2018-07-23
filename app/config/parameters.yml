@@ -22,3 +22,4 @@ parameters:
     phpcr_user: admin
     phpcr_pass: admin
     phpcr_cache: file_system
+    getraenkeverwaltung_host: getraenkeverwaltung.lo

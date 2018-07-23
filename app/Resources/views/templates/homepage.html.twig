@@ -11,6 +11,10 @@
 {% endblock %}
 
 {% block content %}
+	{{ render_esi(controller('SuluCommunityBundle:Login:embed', {
+		'_portal' : request.portalKey|default('default_portal_key'),
+		'_locale' : app.request.locale
+	})) }}
     <h1 property="title">{{ content.title }}</h1>
 
     <div property="article">

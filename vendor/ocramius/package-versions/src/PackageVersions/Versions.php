@@ -14,6 +14,7 @@ final class Versions
     const VERSIONS = array (
   'aferrandini/urlizer' => '1.0.0@9223a883ac24981385cf3ea41bff526c95a3547a',
   'alchemy/binary-driver' => '1.6.0@80c6633890afb71d2417ae851d0ad167d8b00b95',
+  'beberlei/DoctrineExtensions' => 'v1.1.3@51d93393ddced649da6066db233bc8e285a6588c',
   'behat/transliterator' => 'v1.2.0@826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c',
   'cboden/ratchet' => 'v0.3.6@84df35d2a6576985b9e81b564d3c25809f8d647e',
   'composer/ca-bundle' => '1.1.1@d2c0a83b7533d6912e8d516756ebd34f893e9169',
@@ -89,6 +90,7 @@ final class Versions
   'sensio/framework-extra-bundle' => 'v3.0.29@bb907234df776b68922eb4b25bfa061683597b6a',
   'sensiolabs/security-checker' => 'v4.1.8@dc270d5fec418cc6ac983671dba5d80ffaffb142',
   'stof/doctrine-extensions-bundle' => 'v1.3.0@46db71ec7ffee9122eca3cdddd4ef8d84bae269c',
+  'sulu/community-bundle' => '1.0.1@65f6b98f1aa86d1b9b5c55b0211729dbe4776404',
   'sulu/document-manager' => '0.10.1@a312dca06dfaf34b14405ce1c4465c07c7d30f26',
   'sulu/sulu' => '1.6.19@b9099d363a5c0047f2a661bbb8e3c6412c29df6b',
   'swiftmailer/swiftmailer' => 'v5.4.9@7ffc1ea296ed14bf8260b6ef11b80208dbadba91',
@@ -103,6 +105,7 @@ final class Versions
   'symfony/polyfill-php56' => 'v1.8.0@af98553c84912459db3f636329567809d639a8f6',
   'symfony/polyfill-php70' => 'v1.8.0@77454693d8f10dd23bb24955cffd2d82db1007a6',
   'symfony/polyfill-util' => 'v1.8.0@1a5ad95d9436cbff3296034fe9f8d586dce3fb3a',
+  'symfony/security-acl' => 'v3.0.1@ab4dfe2d95e038cd367dd04604487b0a3359bcff',
   'symfony/swiftmailer-bundle' => 'v2.6.7@c4808f5169efc05567be983909d00f00521c53ec',
   'symfony/symfony' => 'v3.4.12@c36f8cb21b5f1661a14fdb8cef9cc611d54a3494',
   'true/punycode' => 'v2.1.1@a4d0c11a36dd7f4e7cd7096076cab6d3378a071e',
@@ -121,7 +124,7 @@ final class Versions
   'phpcr/phpcr-shell' => '1.0.1@e3ff8fb8d99b0b490d1c11dbff1f5bfc28049de0',
   'sensio/generator-bundle' => 'v3.1.7@28cbaa244bd0816fd8908b93f90380bcd7b67a65',
   'symfony/phpunit-bridge' => 'v3.4.12@8a21eb6bedad38bf1f15d529c65eb9e17d0242fd',
-  'sulu/sulu-minimal' => 'dev-master@f3f679377963039e042f352dc64161965427dd6e',
+  'sulu/sulu-minimal' => 'dev-master@af35890aa03b6ad5ff9eab11165e096da7bf001e',
 );
 
     private function __construct()

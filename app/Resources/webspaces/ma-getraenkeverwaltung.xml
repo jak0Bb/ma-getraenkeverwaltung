@@ -10,6 +10,10 @@
         <localization language="en" default="true"/>
     </localizations>
 
+	<security>
+		<system>Website</system>
+	</security>
+
     <default-templates>
         <default-template type="page">default</default-template>
         <default-template type="home">homepage</default-template>

@@ -8,7 +8,7 @@ parameters:
     locale: en
 
 framework:
-    #esi:             ~
+    esi:             { enabled: true }
     translator: { fallbacks: ["%locale%"] }
     secret: "%secret%"
     router:
@@ -143,3 +143,21 @@ dubture_f_fmpeg:
 services:
     jms_serializer.cache_naming_strategy: "@sulu_core.serialize_caching_strategy"
 
+sulu_community:
+    webspaces:
+        ma-getraenkeverwaltung: # Replace <webspace_key> with the key of your webspace
+            from:
+                name: "Massive Art Getränkeverwaltung"
+                email: "%sulu_admin.email%"
+sulu_community:
+    webspaces:
+        ma-getraenkeverwaltung:
+            login:
+                embed_template: AppBundle:templates:community/Login/login-embed.html.twig
+                template: AppBundle:templates:community/Login/login.html.twig
+
+sulu_http_cache:
+    handlers:
+        public:
+            max_age: 0
+            shared_max_age: 0
