@@ -12,7 +12,7 @@ class __TwigTemplate_64ea2415f354e3811f6080d618812bb0496e9296c271dab9dfbe9897fbf
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("SuluCommunityBundle::master.html.twig", "SuluCommunityBundle:Profile:profile-form.html.twig", 1);
+        $this->parent = $this->loadTemplate("master.html.twig", "SuluCommunityBundle:Profile:profile-form.html.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -20,7 +20,7 @@ class __TwigTemplate_64ea2415f354e3811f6080d618812bb0496e9296c271dab9dfbe9897fbf
 
     protected function doGetParent(array $context)
     {
-        return "SuluCommunityBundle::master.html.twig";
+        return "master.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -49,11 +49,12 @@ class __TwigTemplate_64ea2415f354e3811f6080d618812bb0496e9296c271dab9dfbe9897fbf
     ";
         }
         // line 11
-        echo "
-    ";
+        echo "    <div class=\"form-login form-profile box\">
+        ";
         // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? null), 'form');
         echo "
+    </div>
 ";
     }
 

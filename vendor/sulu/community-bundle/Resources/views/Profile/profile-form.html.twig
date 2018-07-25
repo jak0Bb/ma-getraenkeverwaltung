@@ -1,4 +1,4 @@
-{% extends "SuluCommunityBundle::master.html.twig" %}
+{% extends "master.html.twig" %}
 
 {% block content %}
     <h1>{{ 'Profile'|trans }}</h1>
@@ -8,6 +8,7 @@
             {{ 'save_profile_finished'|trans }}
         </p>
     {% endif %}
-
-    {{ form(form) }}
+    <div class="form-login form-profile box">
+        {{ form(form) }}
+    </div>
 {% endblock %}

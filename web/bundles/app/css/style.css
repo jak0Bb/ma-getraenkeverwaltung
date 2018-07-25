@@ -478,3 +478,8 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: 10%;
     cursor: pointer;
 }
+.form-profile input, .form-profile label {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}

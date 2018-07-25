@@ -16,6 +16,6 @@ if (!\class_exists(adminProdProjectContainer::class, false)) {
 
 return new \ContainerJsor0vn\adminProdProjectContainer(array(
     'container.build_hash' => 'Jsor0vn',
-    'container.build_id' => '9dc2b0a5',
-    'container.build_time' => 1532511033,
+    'container.build_id' => 'e0032452',
+    'container.build_time' => 1532521744,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerJsor0vn');
