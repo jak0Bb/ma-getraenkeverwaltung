@@ -1,0 +1,3 @@
+0
+%255BSulu%255CBundle%255CContactBundle%255CApi%255CContact%2523getTitle%255D%255B1%255D
+a:3:{i:0;O:41:"JMS\Serializer\Annotation\VirtualProperty":3:{s:3:"exp";N;s:4:"name";N;s:7:"options";a:0:{}}i:1;O:40:"JMS\Serializer\Annotation\SerializedName":1:{s:4:"name";s:5:"title";}i:2;O:32:"JMS\Serializer\Annotation\Groups":1:{s:6:"groups";a:2:{i:0;s:11:"fullContact";i:1;s:14:"partialContact";}}}

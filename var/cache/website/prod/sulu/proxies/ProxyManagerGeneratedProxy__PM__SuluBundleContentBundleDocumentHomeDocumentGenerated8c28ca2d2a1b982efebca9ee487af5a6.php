@@ -8,17 +8,17 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
     /**
      * @var \Closure|null initializer responsible for generating the wrapped object
      */
-    private $initializer5b58387b7501a497916997 = null;
+    private $initializer5b5847046a332314536504 = null;
 
     /**
      * @var bool tracks initialization status - true while the object is initializing
      */
-    private $initializationTracker5b58387b7520c702931328 = false;
+    private $initializationTracker5b5847046a45e473200094 = false;
 
     /**
      * @var bool[] map of public properties of the parent class
      */
-    private static $publicProperties5b58387b74364500125013 = [
+    private static $publicProperties5b58470469441735313532 = [
         
     ];
 
@@ -26,7 +26,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      * @var array[][] visibility and default value of defined properties, indexed by
      * property name and class name
      */
-    private static $privateProperties5b58387b74a6f388708820 = [
+    private static $privateProperties5b58470469f20835553036 = [
         
     ];
 
@@ -34,7 +34,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      * @var string[][] declaring class name of defined protected properties, indexed by
      * property name
      */
-    private static $protectedProperties5b58387b74bb6568741380 = [
+    private static $protectedProperties5b5847046a079100843571 = [
         'nodeName' => 'Sulu\\Bundle\\ContentBundle\\Document\\BasePageDocument',
         'created' => 'Sulu\\Bundle\\ContentBundle\\Document\\BasePageDocument',
         'changed' => 'Sulu\\Bundle\\ContentBundle\\Document\\BasePageDocument',
@@ -76,13 +76,13 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      * 
      * @return mixed
      */
-    private function callInitializer5b58387b75a1d198507501($methodName, array $parameters)
+    private function callInitializer5b5847046a99c725645221($methodName, array $parameters)
     {
-        if ($this->initializationTracker5b58387b7520c702931328 || ! $this->initializer5b58387b7501a497916997) {
+        if ($this->initializationTracker5b5847046a45e473200094 || ! $this->initializer5b5847046a332314536504) {
             return;
         }
         
-        $this->initializationTracker5b58387b7520c702931328 = true;
+        $this->initializationTracker5b5847046a45e473200094 = true;
         
         $this->nodeName = NULL;
         $this->created = NULL;
@@ -151,8 +151,8 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
 
         
         
-        $result = $this->initializer5b58387b7501a497916997->__invoke($this, $methodName, $parameters, $this->initializer5b58387b7501a497916997, $properties);
-        $this->initializationTracker5b58387b7520c702931328 = false;
+        $result = $this->initializer5b5847046a332314536504->__invoke($this, $methodName, $parameters, $this->initializer5b5847046a332314536504, $properties);
+        $this->initializationTracker5b5847046a45e473200094 = false;
         
         return $result;
     }
@@ -171,7 +171,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
 
         unset($instance->nodeName, $instance->created, $instance->changed, $instance->creator, $instance->changer, $instance->title, $instance->resourceSegment, $instance->navigationContexts, $instance->redirectType, $instance->redirectTarget, $instance->redirectExternal, $instance->workflowStage, $instance->published, $instance->shadowLocaleEnabled, $instance->shadowLocale, $instance->uuid, $instance->structureType, $instance->structure, $instance->locale, $instance->originalLocale, $instance->children, $instance->path, $instance->extensions, $instance->webspaceName, $instance->suluOrder, $instance->permissions, $instance->versions, $instance->authored, $instance->author);
 
-        $instance->initializer5b58387b7501a497916997 = $initializer;
+        $instance->initializer5b5847046a332314536504 = $initializer;
 
         return $instance;
     }
@@ -181,14 +181,14 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function & __get($name)
     {
-        $this->initializer5b58387b7501a497916997 && ! $this->initializationTracker5b58387b7520c702931328 && $this->callInitializer5b58387b75a1d198507501('__get', array('name' => $name));
+        $this->initializer5b5847046a332314536504 && ! $this->initializationTracker5b5847046a45e473200094 && $this->callInitializer5b5847046a99c725645221('__get', array('name' => $name));
         
-        if (isset(self::$publicProperties5b58387b74364500125013[$name])) {
+        if (isset(self::$publicProperties5b58470469441735313532[$name])) {
             return $this->$name;
         }
         
-        if (isset(self::$protectedProperties5b58387b74bb6568741380[$name])) {
-            if ($this->initializationTracker5b58387b7520c702931328) {
+        if (isset(self::$protectedProperties5b5847046a079100843571[$name])) {
+            if ($this->initializationTracker5b5847046a45e473200094) {
                 return $this->$name;
             }
         
@@ -196,7 +196,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             $callers      = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller       = isset($callers[1]) ? $callers[1] : [];
             $object       = isset($caller['object']) ? $caller['object'] : '';
-            $expectedType = self::$protectedProperties5b58387b74bb6568741380[$name];
+            $expectedType = self::$protectedProperties5b5847046a079100843571[$name];
         
             if ($object instanceof $expectedType) {
                 return $this->$name;
@@ -207,7 +207,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             if ($class === $expectedType || is_subclass_of($class, $expectedType) || $class === 'ReflectionProperty') {
                 return $this->$name;
             }
-        } elseif (isset(self::$privateProperties5b58387b74a6f388708820[$name])) {
+        } elseif (isset(self::$privateProperties5b58470469f20835553036[$name])) {
             // check private property access via same class
             $callers = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller  = isset($callers[1]) ? $callers[1] : [];
@@ -215,7 +215,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
         
             static $accessorCache = [];
         
-            if (isset(self::$privateProperties5b58387b74a6f388708820[$name][$class])) {
+            if (isset(self::$privateProperties5b58470469f20835553036[$name][$class])) {
                 $cacheKey = $class . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -226,8 +226,8 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
                 return $accessor($this);
             }
         
-            if ($this->initializationTracker5b58387b7520c702931328 || 'ReflectionProperty' === $class) {
-                $tmpClass = key(self::$privateProperties5b58387b74a6f388708820[$name]);
+            if ($this->initializationTracker5b5847046a45e473200094 || 'ReflectionProperty' === $class) {
+                $tmpClass = key(self::$privateProperties5b58470469f20835553036[$name]);
                 $cacheKey = $tmpClass . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -276,18 +276,18 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function __set($name, $value)
     {
-        $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('__set', array('name' => $name, 'value' => $value));
+        $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('__set', array('name' => $name, 'value' => $value));
         
-        if (isset(self::$publicProperties5b58387b74364500125013[$name])) {
+        if (isset(self::$publicProperties5b58470469441735313532[$name])) {
             return ($this->$name = $value);
         }
         
-        if (isset(self::$protectedProperties5b58387b74bb6568741380[$name])) {
+        if (isset(self::$protectedProperties5b5847046a079100843571[$name])) {
             // check protected property access via compatible class
             $callers      = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller       = isset($callers[1]) ? $callers[1] : [];
             $object       = isset($caller['object']) ? $caller['object'] : '';
-            $expectedType = self::$protectedProperties5b58387b74bb6568741380[$name];
+            $expectedType = self::$protectedProperties5b5847046a079100843571[$name];
         
             if ($object instanceof $expectedType) {
                 return ($this->$name = $value);
@@ -298,7 +298,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             if ($class === $expectedType || is_subclass_of($class, $expectedType) || $class === 'ReflectionProperty') {
                 return ($this->$name = $value);
             }
-        } elseif (isset(self::$privateProperties5b58387b74a6f388708820[$name])) {
+        } elseif (isset(self::$privateProperties5b58470469f20835553036[$name])) {
             // check private property access via same class
             $callers = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller  = isset($callers[1]) ? $callers[1] : [];
@@ -306,7 +306,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
         
             static $accessorCache = [];
         
-            if (isset(self::$privateProperties5b58387b74a6f388708820[$name][$class])) {
+            if (isset(self::$privateProperties5b58470469f20835553036[$name][$class])) {
                 $cacheKey = $class . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -318,7 +318,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             }
         
             if ('ReflectionProperty' === $class) {
-                $tmpClass = key(self::$privateProperties5b58387b74a6f388708820[$name]);
+                $tmpClass = key(self::$privateProperties5b58470469f20835553036[$name]);
                 $cacheKey = $tmpClass . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -356,18 +356,18 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function __isset($name)
     {
-        $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('__isset', array('name' => $name));
+        $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('__isset', array('name' => $name));
         
-        if (isset(self::$publicProperties5b58387b74364500125013[$name])) {
+        if (isset(self::$publicProperties5b58470469441735313532[$name])) {
             return isset($this->$name);
         }
         
-        if (isset(self::$protectedProperties5b58387b74bb6568741380[$name])) {
+        if (isset(self::$protectedProperties5b5847046a079100843571[$name])) {
             // check protected property access via compatible class
             $callers      = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller       = isset($callers[1]) ? $callers[1] : [];
             $object       = isset($caller['object']) ? $caller['object'] : '';
-            $expectedType = self::$protectedProperties5b58387b74bb6568741380[$name];
+            $expectedType = self::$protectedProperties5b5847046a079100843571[$name];
         
             if ($object instanceof $expectedType) {
                 return isset($this->$name);
@@ -386,7 +386,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
         
             static $accessorCache = [];
         
-            if (isset(self::$privateProperties5b58387b74a6f388708820[$name][$class])) {
+            if (isset(self::$privateProperties5b58470469f20835553036[$name][$class])) {
                 $cacheKey = $class . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -398,7 +398,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             }
         
             if ('ReflectionProperty' === $class) {
-                $tmpClass = key(self::$privateProperties5b58387b74a6f388708820[$name]);
+                $tmpClass = key(self::$privateProperties5b58470469f20835553036[$name]);
                 $cacheKey = $tmpClass . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -436,20 +436,20 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function __unset($name)
     {
-        $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('__unset', array('name' => $name));
+        $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('__unset', array('name' => $name));
         
-        if (isset(self::$publicProperties5b58387b74364500125013[$name])) {
+        if (isset(self::$publicProperties5b58470469441735313532[$name])) {
             unset($this->$name);
         
             return;
         }
         
-        if (isset(self::$protectedProperties5b58387b74bb6568741380[$name])) {
+        if (isset(self::$protectedProperties5b5847046a079100843571[$name])) {
             // check protected property access via compatible class
             $callers      = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller       = isset($callers[1]) ? $callers[1] : [];
             $object       = isset($caller['object']) ? $caller['object'] : '';
-            $expectedType = self::$protectedProperties5b58387b74bb6568741380[$name];
+            $expectedType = self::$protectedProperties5b5847046a079100843571[$name];
         
             if ($object instanceof $expectedType) {
                 unset($this->$name);
@@ -464,7 +464,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
         
                 return;
             }
-        } elseif (isset(self::$privateProperties5b58387b74a6f388708820[$name])) {
+        } elseif (isset(self::$privateProperties5b58470469f20835553036[$name])) {
             // check private property access via same class
             $callers = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT, 2);
             $caller  = isset($callers[1]) ? $callers[1] : [];
@@ -472,7 +472,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
         
             static $accessorCache = [];
         
-            if (isset(self::$privateProperties5b58387b74a6f388708820[$name][$class])) {
+            if (isset(self::$privateProperties5b58470469f20835553036[$name][$class])) {
                 $cacheKey = $class . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -484,7 +484,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
             }
         
             if ('ReflectionProperty' === $class) {
-                $tmpClass = key(self::$privateProperties5b58387b74a6f388708820[$name]);
+                $tmpClass = key(self::$privateProperties5b58470469f20835553036[$name]);
                 $cacheKey = $tmpClass . '#' . $name;
                 $accessor = isset($accessorCache[$cacheKey])
                     ? $accessorCache[$cacheKey]
@@ -519,12 +519,12 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
 
     public function __clone()
     {
-        $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('__clone', []);
+        $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('__clone', []);
     }
 
     public function __sleep()
     {
-        $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('__sleep', []);
+        $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('__sleep', []);
 
         return array_keys((array) $this);
     }
@@ -534,7 +534,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function setProxyInitializer(\Closure $initializer = null)
     {
-        $this->initializer5b58387b7501a497916997 = $initializer;
+        $this->initializer5b5847046a332314536504 = $initializer;
     }
 
     /**
@@ -542,7 +542,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function getProxyInitializer()
     {
-        return $this->initializer5b58387b7501a497916997;
+        return $this->initializer5b5847046a332314536504;
     }
 
     /**
@@ -550,7 +550,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function initializeProxy() : bool
     {
-        return $this->initializer5b58387b7501a497916997 && $this->callInitializer5b58387b75a1d198507501('initializeProxy', []);
+        return $this->initializer5b5847046a332314536504 && $this->callInitializer5b5847046a99c725645221('initializeProxy', []);
     }
 
     /**
@@ -558,7 +558,7 @@ class Generated8c28ca2d2a1b982efebca9ee487af5a6 extends \Sulu\Bundle\ContentBund
      */
     public function isProxyInitialized() : bool
     {
-        return ! $this->initializer5b58387b7501a497916997;
+        return ! $this->initializer5b5847046a332314536504;
     }
 
 

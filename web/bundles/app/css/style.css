@@ -33,17 +33,20 @@ h6 {
 }
 
 .navbar-custom .navbar-brand {
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
 }
 
 .navbar-custom .navbar-nav .nav-item .nav-link {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+.navbar-custom .navbar-nav .nav-item:last-child .nav-link {
+    margin-left: 50px;
 }
 .navbar-custom div.container {
     width: 60%;
@@ -463,7 +466,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1.25rem;
     font-weight: bold;
 }
-
 #monthpicker {
     outline: none;
     border: none;
@@ -474,4 +476,5 @@ input[type=number]::-webkit-outer-spin-button {
     width: 125px;
     height: 35px;
     margin-left: 10%;
+    cursor: pointer;
 }

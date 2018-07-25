@@ -98,6 +98,9 @@ class __TwigTemplate_1c7a97498d1368d1979cc6d327705f6bd0293a47cfa38fea27753cca367
                 MaxMonth: 0,
                 MonthFormat: 'mm/y',
                 SelectedMonth: new Date(),
+                OnAfterChooseMonth: function() {
+                    alert(\$(this).val());
+                }
             });
         });
     </script>
