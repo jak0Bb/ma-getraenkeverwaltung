@@ -3,17 +3,15 @@
     {% if app.user.contact.avatar is not null %}
         {% set media = sulu_resolve_media(app.user.contact.avatar, request.locale) %}
     {% endif %}
-
-    <a href="{{ path('sulu_community.profile') }}">
-        {% if media is not null %}
-            <img src="{{ media.thumbnails['50x50'] }}"/>
-        {% endif %}
-
-        {{ app.user.username|default('Profile') }}
-    </a>
-
-    <a href="{{ path('sulu_community.logout') }}">
-        Logout
-    </a>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('sulu_community.profile') }}">
+            {{ app.user.contact.firstname }}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('sulu_community.logout') }}">
+            Logout
+        </a>
+    </li>
 {% else %}
 {% endif %}

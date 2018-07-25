@@ -34,34 +34,25 @@ class __TwigTemplate_ae6f9bc814763a1309d2ac391764b271cb048a39c077469d790cfaaf4da
                 echo "    ";
             }
             // line 6
-            echo "
-    <a href=\"";
+            echo "    <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"";
             // line 7
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sulu_community.profile");
             echo "\">
-        ";
+            ";
             // line 8
-            if ( !(null === ($context["media"] ?? null))) {
-                // line 9
-                echo "            <img src=\"";
-                echo twig_escape_filter($this->env, (($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5 = twig_get_attribute($this->env, $this->source, ($context["media"] ?? null), "thumbnails", array())) && is_array($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5) || $__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5 instanceof ArrayAccess ? ($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5["50x50"] ?? null) : null), "html", null, true);
-                echo "\"/>
-        ";
-            }
-            // line 11
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", array()), "contact", array()), "firstname", array()), "html", null, true);
             echo "
-        ";
+        </a>
+    </li>
+    <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"";
             // line 12
-            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", array(), "any", false, true), "username", array(), "any", true, true)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", array(), "any", false, true), "username", array()), "Profile")) : ("Profile")), "html", null, true);
-            echo "
-    </a>
-
-    <a href=\"";
-            // line 15
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sulu_community.logout");
             echo "\">
-        Logout
-    </a>
+            Logout
+        </a>
+    </li>
 ";
         } else {
         }
@@ -79,11 +70,11 @@ class __TwigTemplate_ae6f9bc814763a1309d2ac391764b271cb048a39c077469d790cfaaf4da
 
     public function getDebugInfo()
     {
-        return array (  61 => 15,  55 => 12,  52 => 11,  46 => 9,  44 => 8,  40 => 7,  37 => 6,  34 => 5,  31 => 4,  28 => 3,  25 => 2,  23 => 1,);
+        return array (  51 => 12,  44 => 8,  40 => 7,  37 => 6,  34 => 5,  31 => 4,  28 => 3,  25 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SuluCommunityBundle:Login:login-embed.html.twig", "C:\\xampp\\htdocs\\ma-getraenkeverwaltung\\vendor\\sulu\\community-bundle/Resources/views/Login/login-embed.html.twig");
+        return new Twig_Source("", "SuluCommunityBundle:Login:login-embed.html.twig", "C:\\Users\\Lorenz\\Desktop\\Node\\ma-getraenkeverwaltung\\vendor\\sulu\\community-bundle/Resources/views/Login/login-embed.html.twig");
     }
 }

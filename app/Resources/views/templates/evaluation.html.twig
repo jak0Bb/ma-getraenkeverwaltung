@@ -1,0 +1,52 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% include "SuluWebsiteBundle:Extension:seo.html.twig" with {
+        "seo": extension.seo|default([]),
+        "content": content|default([]),
+        "urls": urls|default([]),
+        "shadowBaseLocale": shadowBaseLocale|default(),
+        "defaultLocale": request.defaultLocale|default('de')
+    } %}
+{% endblock %}
+{% block style %}
+    <link href="{{ asset('bundles/app/css/MonthPicker.css') }}" rel="stylesheet">
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset('bundles/app/js/getraenkeverwaltung.js') }}"></script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="box evaluation">
+        <input id="monthpicker" type="text" class="month-year-input" readonly>
+        <div class="products">
+            {# ToDo: For through all bought products#}
+            <div class="product">
+                <h2>Test1</h2>
+                <div class="product-info-box">5</div>
+                <div class="product-info-box price">12.20</div>
+                <div class="bottom-border"></div>
+            </div>
+            <div class="product">
+                <h2>Test2</h2>
+                <div class="product-info-box">2</div>
+                <div class="product-info-box price">8</div>
+                <div class="bottom-border"></div>
+            </div>
+        </div>
+        <div class="book-info">
+            <div class="total-price-box evaluation-price">€ 0,00</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#monthpicker').MonthPicker({
+                Button: false,
+                MaxMonth: 0,
+                MonthFormat: 'mm/y',
+                SelectedMonth: new Date(),
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% include "SuluWebsiteBundle:Extension:seo.html.twig" with {
+        "seo": extension.seo|default([]),
+        "content": content|default([]),
+        "urls": urls|default([]),
+        "shadowBaseLocale": shadowBaseLocale|default(),
+        "defaultLocale": request.defaultLocale|default('de')
+    } %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ asset('bundles/app/js/getraenkeverwaltung.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="box">
+        <div class="products">
+            {% for product in content.products %}
+                <div class="product">
+                    <h2>{{ product.title }}</h2>
+                    <div class="number-input">
+                        <button onclick="substract({{ product.price }}, {{ loop.index }});this.parentNode.querySelector('input[type=number]').stepDown();"></button>
+                        <input class="quantity" min="0" max={{ product.stock }} name="quantity" value="0" type="number" readonly>
+                        <button onclick="add({{ product.price }}, {{ loop.index }}, {{ product.stock }});this.parentNode.querySelector('input[type=number]').stepUp();" class="plus"></button>
+                    </div>
+                    <div class="product-info-box price">{{ product.price }}</div>
+                    <div class="bottom-border"></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="book-info">
+            <form class="submit">
+                <input type="button" value="Book">
+            </form>
+            <div class="total-price-box">€ 0,00</div>
+        </div>
+    </div>
+{% endblock %}

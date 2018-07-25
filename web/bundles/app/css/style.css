@@ -45,8 +45,12 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
+.navbar-custom div.container {
+    width: 60%;
+    padding: 0.75rem 0;
+}
 .navbar-brand img {
-  height: 5rem;
+    height: 4rem;
 }
 
 header.masthead {
@@ -303,4 +307,171 @@ footer{
     100% {
         -webkit-transform: translateX(100%);
     }
+}
+
+h1 {
+    margin-left: 20%;
+    margin-top: 10rem;
+}
+.box {
+    width: 60%;
+    height: 650px;
+    padding-top: 20px;
+    margin-top: 2rem;
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.16);
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+.box .products .product {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px 0;
+}
+.box .product .product-info-box {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 154px;
+    height: 52px;
+    text-align: center;
+    background-color: black;
+    color: rgba(255, 255, 255, 1);
+    line-height: 52px;
+    text-align: right;
+    padding-right: 35px;
+}
+.box.evaluation .product .product-info-box:nth-child(2n) {
+    right: 160px;
+    width: 130px;
+}
+.box .products .product .bottom-border {
+    background-image: linear-gradient(to right, black 50%, rgba(255,255,255,0) 0%);
+    background-size: 30px;
+    background-repeat: repeat-x;
+    right: 230px;
+    width: calc(100% - 320px);
+    height: 3px;
+}
+.box .products::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+.box .products::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #000;
+}
+.box .products {
+    height: 485px;
+    overflow: auto;
+}
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.box .products .product .number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+    position: absolute;
+    top: 15px;
+    right: 160px;
+}
+
+.box .products .product .number-input,
+.box .products .product .number-input * {
+    box-sizing: border-box;
+}
+
+.box .products .product .number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.box .products .product .number-input button:before,
+.box .products .product .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0.5rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+}
+.box .products .product .number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.box .products .product .number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 3rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 1.2rem;
+    height: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+.box .book-info {
+    position: relative;
+    margin: 0 auto;
+    width: calc(80% - 18px);
+    margin-top: 40px;
+}
+.box form.submit input {
+    width: 208px;
+    height: 63px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+}
+.box form.submit input:hover {
+    cursor: pointer;
+}
+.box .total-price-box {
+    position: absolute;
+    line-height: 62px;
+    padding-right: 20px;
+    right: 0;
+    top:0;
+    width: 218px;
+    height: 63px;
+    text-align: right;
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#monthpicker {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    text-align: right;
+    padding-right: 20px;
+    width: 125px;
+    height: 35px;
+    margin-left: 10%;
 }

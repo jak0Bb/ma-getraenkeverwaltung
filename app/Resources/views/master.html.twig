@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if extension is defined and content is defined %}
+            {%- include 'SuluWebsiteBundle:Extension:seo.html.twig' with
+                {
+                    seo: extension.seo,
+                    content: content,
+                    urls: urls,
+                    shadowBaseLocale: shadowBaseLocale,
+                    defaultLocale: request.defaultLocale
+                }
+            %}
+        {% endif %}
 
-        <link href="/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/logo-nav.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-		
-        {% block meta %}{% endblock %}
+        {% block meta %}
+
+        {% endblock %}
+
+        <title>Getränkeverwaltung</title>
 
         {% block style %}{% endblock %}
+
+        <link href="{{ asset('bundles/app/css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+        <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ asset('bundles/app/css/jquery-ui.css') }}">
+
+        {% block scripts %}{% endblock %}
+
+        <script src="{{ asset('bundles/app/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/js/jquery-ui.js') }}"></script>
+
+        <script src="{{ asset('bundles/app/js/MonthPicker.js') }}"></script>
     </head>
     <body>
         <header>
             {% block header %}
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo.png" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto">
-                            {% for item in sulu_navigation_root_tree('main') %}
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{{ sulu_content_path(item.url) }}"
-                                       title="{{ item.title }}">{{ item.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                {# ToDO: Include from Navigation-Template #}
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"><img src="{{ asset('bundles/app/img/logo.png') }}"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                {% for item in sulu_navigation_root_tree('main') %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ sulu_content_path(item.url) }}"
+                                           title="{{ item.title }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                                {{ render_esi(controller('SuluCommunityBundle:Login:embed', {
+                                    '_portal' : request.portalKey|default('default_portal_key'),
+                                    '_locale' : app.request.locale
+                                })) }}
+                            </ul>
+                        </div>
                     </div>
-                </nav>Z
+                </nav>
             {% endblock %}
         </header>
 
-        <form action="{{ path('sulu_search.website_search') }}" method="GET">
-            <input name="q" type="text" placeholder="Search" />
-            <input type="submit" value="Go" />
-        </form>
-
         <section id="content" vocab="http://schema.org/" typeof="Content">
+            <h1>{{ content.title  }} </h1>
             {% block content %}{% endblock %}
         </section>
 
@@ -56,12 +81,6 @@
             {% endblock %}
         </footer>
 
-        {% block javascripts %}
-
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-
-        {% endblock %}
-
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

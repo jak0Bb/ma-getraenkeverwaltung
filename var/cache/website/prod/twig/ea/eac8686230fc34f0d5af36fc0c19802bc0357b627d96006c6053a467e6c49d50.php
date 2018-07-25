@@ -179,6 +179,6 @@ class __TwigTemplate_60ea83261893bab75fccb0472bb9dd1b68871b7e45777147291b83cf02e
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SuluWebsiteBundle:Extension:seo.html.twig", "C:\\xampp\\htdocs\\ma-getraenkeverwaltung\\vendor\\sulu\\sulu\\src\\Sulu\\Bundle\\WebsiteBundle/Resources/views/Extension/seo.html.twig");
+        return new Twig_Source("", "SuluWebsiteBundle:Extension:seo.html.twig", "C:\\Users\\Lorenz\\Desktop\\Node\\ma-getraenkeverwaltung\\vendor\\sulu\\sulu\\src\\Sulu\\Bundle\\WebsiteBundle/Resources/views/Extension/seo.html.twig");
     }
 }
