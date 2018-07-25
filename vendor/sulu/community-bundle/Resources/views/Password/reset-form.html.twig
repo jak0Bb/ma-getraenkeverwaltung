@@ -1,17 +1,17 @@
 {% extends "SuluCommunityBundle::master.html.twig" %}
 
 {% block content %}
-    <h1>{{ 'Password_reset'|trans }}</h1>
-
     {% if app.request.get('send') == 'true' %}
-        <p>
-            {{ 'password_reset_finished'|trans }}
-        </p>
+        <script type="text/javascript">
+			window.location = '../login';
+		</script>
     {% else %}
         {% if form %}
+			<h1> Enter New Password </h1>
             {{ form(form) }}
         {% else %}
-            {{ 'password_reset_token_invalid'|trans }}
+            <h1> Error </h1>
+			<p> Your Reset Token Was Invalid </p>
         {% endif %}
     {% endif %}
 {% endblock %}

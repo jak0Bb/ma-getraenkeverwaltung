@@ -8,14 +8,14 @@ parameters:
     database_password: null
     database_version: 5.5
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    mailer_host: smtp.derprovider.at
+    mailer_user: jakob.linder@massiveacademy.at
+    mailer_password: jakob.linder
     secret: ThisTokenIsNotSoSecretChangeIt
     sulu_admin.name: Sulu
-    sulu_admin.email: null
-    websocket_port: 9876
-    websocket_url: sulu.lo
+    sulu_admin.email: jakob.linder@massiveacademy.at
+    websocket_port: 587
+    websocket_url: imap.derprovider.at
     phpcr_backend:
         type: doctrinedbal
     phpcr_workspace: default

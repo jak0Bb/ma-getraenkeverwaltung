@@ -1,6 +1,7 @@
 {% extends "SuluCommunityBundle::master-email.html.twig" %}
 
 {% block content %}
+	<h2> To reset your password, click the link below. </h2>
     {% set url = url('sulu_community.password_reset', { token: user.passwordResetToken }) %}
 
     <a href="{{ url }}">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 23. Jul 2018 um 10:36
+-- Erstellungszeit: 25. Jul 2018 um 09:38
 -- Server-Version: 10.1.28-MariaDB
 -- PHP-Version: 7.1.10
 
@@ -111,6 +111,43 @@ CREATE TABLE `ca_keywords` (
   `idUsersCreator` int(11) DEFAULT NULL,
   `idUsersChanger` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cl_drinks_booking`
+--
+
+CREATE TABLE `cl_drinks_booking` (
+  `id` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
+  `total` decimal(11,0) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cl_drinks_booking_product_merge`
+--
+
+CREATE TABLE `cl_drinks_booking_product_merge` (
+  `idBooking` int(11) NOT NULL,
+  `idProduct` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cl_drinks_products`
+--
+
+CREATE TABLE `cl_drinks_products` (
+  `id` int(11) NOT NULL,
+  `title` varchar(45) NOT NULL,
+  `price` decimal(11,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1636,7 +1673,8 @@ CREATE TABLE `se_roles` (
 
 INSERT INTO `se_roles` (`id`, `name`, `system`, `created`, `changed`, `idSecurityTypes`, `idUsersCreator`, `idUsersChanger`) VALUES
 (1, 'User', 'Sulu', '2018-07-18 11:37:39', '2018-07-18 11:37:39', NULL, NULL, NULL),
-(2, 'GetraenkeverwaltungUser', 'Website', '2018-07-19 09:04:27', '2018-07-19 09:04:27', NULL, NULL, NULL);
+(2, 'GetraenkeverwaltungUser', 'Website', '2018-07-19 09:04:27', '2018-07-19 09:04:27', NULL, NULL, NULL),
+(3, 'Ma-getraenkeverwaltungUser', 'Website', '2018-07-24 13:24:18', '2018-07-24 13:24:18', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1692,8 +1730,8 @@ CREATE TABLE `se_users` (
 --
 
 INSERT INTO `se_users` (`id`, `username`, `password`, `locale`, `salt`, `locked`, `enabled`, `lastLogin`, `confirmationKey`, `passwordResetToken`, `passwordResetTokenExpiresAt`, `passwordResetTokenEmailsSent`, `privateKey`, `apiKey`, `email`, `idContacts`) VALUES
-(1, 'admin', '18838e4e7a9a4041c860a7c509718337b0c42ca90528db6a3e1ad67c3ed092a8f7a65a4f92ea2468e0ce4e8fa8e6f859e4268f1a1927d073981db5de5d2d9217', 'de', '//FcyC0NsQMwyEwErAhPxRompxB9etfq7nESI2ckh84=', 0, 1, '2018-07-23 10:27:51', NULL, NULL, NULL, NULL, NULL, '9e41f6fecb03e054c2524e05cce24553', 'admin@example.com', 1),
-(3, 'jakob', '6433ddb6db924c20d67cc0adda7e53f11e72c1239539cea096fdda9cb0cb17d7ca9c357ee406a8121279a4b8efc0c6a57325188259eb46c711de71554bda38a4', 'de', 'KBzfQ22EuGSmrgMLuwGHePlCPdQC05GQ0S5JJHQTNOk=', 0, 1, '2018-07-23 08:08:43', NULL, NULL, NULL, NULL, NULL, 'a59d7b0678c90b4861d95647773fd6b0', 'jakob.linder77@gmail.com', 3),
+(1, 'admin', '18838e4e7a9a4041c860a7c509718337b0c42ca90528db6a3e1ad67c3ed092a8f7a65a4f92ea2468e0ce4e8fa8e6f859e4268f1a1927d073981db5de5d2d9217', 'de', '//FcyC0NsQMwyEwErAhPxRompxB9etfq7nESI2ckh84=', 0, 1, '2018-07-25 09:23:27', NULL, NULL, NULL, NULL, NULL, '9e41f6fecb03e054c2524e05cce24553', 'admin@example.com', 1),
+(3, 'jakob', '6433ddb6db924c20d67cc0adda7e53f11e72c1239539cea096fdda9cb0cb17d7ca9c357ee406a8121279a4b8efc0c6a57325188259eb46c711de71554bda38a4', 'de', 'KBzfQ22EuGSmrgMLuwGHePlCPdQC05GQ0S5JJHQTNOk=', 0, 1, '2018-07-25 09:21:59', NULL, NULL, NULL, 17, NULL, 'a59d7b0678c90b4861d95647773fd6b0', 'jakob.linder77@gmail.com', 3),
 (5, 'johannes', '180b11b510ad93ef4effe7f447860df8ca1de5ad38a870212900a8c96e00e304ddb6f5c60d6e91780f55a3abf31e768d8910cce07b9b1408d3a74401365cf41a', 'de', 'p/QXyu5JJH0idtOq2DuXuxZYJvSIcWrWNO2mktAekEU=', 0, 1, '2018-07-20 16:28:22', NULL, NULL, NULL, NULL, NULL, '911d698c862746b34961ec90bc20f035', 'johannes@agenda.com', 5);
 
 -- --------------------------------------------------------
@@ -1860,6 +1898,26 @@ ALTER TABLE `ca_keywords`
   ADD KEY `IDX_FE02CA0BDBF11E1D` (`idUsersCreator`),
   ADD KEY `IDX_FE02CA0B30D07CD5` (`idUsersChanger`),
   ADD KEY `IDX_FE02CA0B5A93713B` (`keyword`);
+
+--
+-- Indizes für die Tabelle `cl_drinks_booking`
+--
+ALTER TABLE `cl_drinks_booking`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idProduct` (`idUser`);
+
+--
+-- Indizes für die Tabelle `cl_drinks_booking_product_merge`
+--
+ALTER TABLE `cl_drinks_booking_product_merge`
+  ADD PRIMARY KEY (`idBooking`,`idProduct`),
+  ADD KEY `idProduct` (`idProduct`);
+
+--
+-- Indizes für die Tabelle `cl_drinks_products`
+--
+ALTER TABLE `cl_drinks_products`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indizes für die Tabelle `com_blacklist_item`
@@ -2565,6 +2623,18 @@ ALTER TABLE `ca_keywords`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT für Tabelle `cl_drinks_booking`
+--
+ALTER TABLE `cl_drinks_booking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `cl_drinks_products`
+--
+ALTER TABLE `cl_drinks_products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT für Tabelle `com_blacklist_item`
 --
 ALTER TABLE `com_blacklist_item`
@@ -2826,7 +2896,7 @@ ALTER TABLE `se_permissions`
 -- AUTO_INCREMENT für Tabelle `se_roles`
 --
 ALTER TABLE `se_roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `se_role_settings`
@@ -2922,6 +2992,19 @@ ALTER TABLE `ca_category_translations_keywords`
 ALTER TABLE `ca_keywords`
   ADD CONSTRAINT `FK_FE02CA0B30D07CD5` FOREIGN KEY (`idUsersChanger`) REFERENCES `se_users` (`id`) ON DELETE SET NULL,
   ADD CONSTRAINT `FK_FE02CA0BDBF11E1D` FOREIGN KEY (`idUsersCreator`) REFERENCES `se_users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints der Tabelle `cl_drinks_booking`
+--
+ALTER TABLE `cl_drinks_booking`
+  ADD CONSTRAINT `cl_drinks_booking_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `co_contacts` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Constraints der Tabelle `cl_drinks_booking_product_merge`
+--
+ALTER TABLE `cl_drinks_booking_product_merge`
+  ADD CONSTRAINT `cl_drinks_booking_product_merge_ibfk_1` FOREIGN KEY (`idBooking`) REFERENCES `cl_drinks_booking` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cl_drinks_booking_product_merge_ibfk_2` FOREIGN KEY (`idProduct`) REFERENCES `cl_drinks_products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `com_blacklist_user`

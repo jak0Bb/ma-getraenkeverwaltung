@@ -32,9 +32,10 @@ class PasswordResetType extends AbstractType
             'plainPassword',
             PasswordType::class,
             [
-                'mapped' => false,
-            ]
-        );
+                'mapped' => false,     
+				'attr' => ['placeholder' => 'New Password'],
+				'label' => false,
+			]);
 
         $builder->add('submit', SubmitType::class);
     }

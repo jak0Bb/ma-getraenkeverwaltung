@@ -2,13 +2,13 @@
 
 {% block content %}
     {% if app.request.get('send') == 'true' %}
+		<h1> Success </h1>
         <p>
-            {{ 'password_forget_finished'|trans }}
+We've sent you an email. Click the link in the email to reset your password. 
+If you don't see the email, check other places it might be, like your junk, spam, social, or other folders. 
         </p>
     {% else %}
-	<div class="form-login">
 	    <h1>{{ 'Forgot Password'|trans }}</h1>
 		{{ form(form) }}
-	</div>
     {% endif %}
 {% endblock %}

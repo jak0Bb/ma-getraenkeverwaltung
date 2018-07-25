@@ -1,11 +1,10 @@
 {% extends "SuluCommunityBundle::master.html.twig" %}
 
+{% block javascripts %}
+{% endblock %}
+
 {% block content %}
 
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-<div class="form-login">
 	<h1 property="title">Welcome</h1>
 	<img src="/bundles/app/img/logo-login.png" />
     <form action="{{ path('sulu_community.login') }}" method="post">
@@ -20,12 +19,14 @@
             If you want to control the URL the user
             <input type="hidden" name="_target_path" value="/" />
         #}
-
+		{% if error %}
+			<script>doShake();</script>
+			<div class="box-alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
         <button type="submit" name="submit">Login</button>
     </form>
 
     <a href="{{ path('sulu_community.password_forget') }}">
         Forgot password
     </a> <br/>
-</div>
 {% endblock %}
